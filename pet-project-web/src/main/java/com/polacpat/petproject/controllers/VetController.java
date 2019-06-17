@@ -6,9 +6,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/")
-public class IndexController {
-    @GetMapping({"index", "index.html"})
-    public String index() {
-        return "index.html";
+public class VetController {
+    @GetMapping({"/vets", "vets/index", "vets/index.html"})
+    public String listVets() {
+        return "vets/index.html";
     }
+
+
 }
+
