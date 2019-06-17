@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping
 public class VetController {
     @GetMapping({"/vets", "vets/index", "vets/index.html"})
     public String listVets() {
