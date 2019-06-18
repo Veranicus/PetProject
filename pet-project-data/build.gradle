@@ -5,7 +5,7 @@ plugins {
 
 group 'com.polacpat'
 version '0.0.1-SNAPSHOT'
-
+mainClassName = 'com.polacpat.petproject.PetProjectApplication'
 sourceCompatibility = 1.8
 
 apply plugin: 'io.spring.dependency-management'
@@ -19,4 +19,5 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'com.h2database:h2'
     runtimeOnly 'mysql:mysql-connector-java'
+    compile project('PetProject')
 }

@@ -1,12 +1,12 @@
 package com.polacpat.petproject.services.map;
 
 import com.polacpat.petproject.model.Owner;
-import com.polacpat.petproject.services.CrudService;
+import com.polacpat.petproject.services.OwnerService;
 
 import java.util.Set;
 
 public class OwnerServiceMap extends AbstractMapService<Owner, Long>
-        implements CrudService<Owner, Long> {
+        implements OwnerService {
 
 
     @Override
@@ -21,6 +21,11 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long>
     @Override
     public Owner save(Owner object) {
         return super.save(object.getId(), object);
+    }
+
+    @Override
+    public Owner findbyLastName(String lastNamed) {
+        return null;
     }
 
     @Override

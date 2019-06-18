@@ -1,16 +1,23 @@
 package com.polacpat.petproject.services.map;
 
 import com.polacpat.petproject.model.Pet;
-import com.polacpat.petproject.services.CrudService;
+import com.polacpat.petproject.services.PetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long>
-        implements CrudService<Pet, Long> {
+        implements PetService {
 
     @Override
     public Set<Pet> findAll() {
         return super.findAll();
+    }
+
+    @Override
+    public Pet findbyName(String lastNamed) {
+        return null;
     }
 
     @Override

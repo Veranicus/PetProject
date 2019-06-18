@@ -1,12 +1,13 @@
 package com.polacpat.petproject.services.map;
 
+import com.polacpat.petproject.model.Owner;
 import com.polacpat.petproject.model.Vet;
-import com.polacpat.petproject.services.CrudService;
+import com.polacpat.petproject.services.VetService;
 
 import java.util.Set;
 
 public class VetServiceMap extends AbstractMapService<Vet, Long>
-        implements CrudService<Vet, Long> {
+        implements VetService {
 
     @Override
     public Set<Vet> findAll() {
@@ -31,5 +32,10 @@ public class VetServiceMap extends AbstractMapService<Vet, Long>
     @Override
     public void deleteById(Long id) {
         super.deleteById(id);
+    }
+
+    @Override
+    public Owner findbyLastName(String lastNamed) {
+        return findbyLastName(lastNamed);
     }
 }
