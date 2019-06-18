@@ -3,9 +3,11 @@ package com.polacpat.petproject.services.map;
 import com.polacpat.petproject.model.Owner;
 import com.polacpat.petproject.model.Vet;
 import com.polacpat.petproject.services.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long>
         implements VetService {
 
